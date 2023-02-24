@@ -34,7 +34,7 @@ def clean_edlevel(x):
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("D:\MLApp\survey_results_public.csv")
+    df = pd.read_csv(".\survey_results_public.csv")
     df = df[["Country", "EdLevel", "YearsCodePro", "Employment", "ConvertedCompYearly"]]
     df = df.rename({"ConvertedCompYearly" :"Salary"}, axis =1)
     df = df[df["Salary"].notnull()]
